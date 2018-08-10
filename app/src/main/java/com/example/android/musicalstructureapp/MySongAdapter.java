@@ -8,12 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MySongAdapter extends ArrayAdapter<Song>{
+public class MySongAdapter extends ArrayAdapter<Song> {
 
     private TextView songNameView;
     private TextView songArtistView;
@@ -21,16 +20,16 @@ public class MySongAdapter extends ArrayAdapter<Song>{
     View listView;
 
     public MySongAdapter(@NonNull Context context, ArrayList<Song> resource) {
-        super(context, 0,resource);
+        super(context, 0, resource);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         listView = convertView;
-        if(listView == null){
+        if (listView == null) {
             listView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.song_list_item,parent,false
+                    R.layout.song_list_item, parent, false
             );
         }
         songNameView = listView.findViewById(R.id.songName_View);
