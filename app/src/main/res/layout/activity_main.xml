@@ -54,28 +54,68 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/list_LL"
+    <RelativeLayout
+        android:id="@+id/list_RL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="invisible"
-        android:weightSum="1">
+        android:visibility="invisible">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".1"
-            android:textSize="32sp"
-            android:textColor="@android:color/white"
-            android:text="Your Music"
-            android:background="@color/colorPrimaryDark"
-            android:gravity="center"/>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="61dp"
+            android:orientation="vertical"
+            android:weightSum="1">
 
-        <ListView
-            android:id="@+id/songs_list"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:text="Your Music"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <ListView
+                android:id="@+id/songs_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".9" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".9" />
-    </LinearLayout>
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/previous"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="previousTen"
+                android:src="@drawable/previous_ten" />
+
+            <ImageView
+                android:id="@+id/pause"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="playPause"
+                android:src="@drawable/play_sign" />
+
+            <ImageView
+                android:id="@+id/forward"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="forwardTen"
+                android:src="@drawable/forward_ten" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
 </RelativeLayout>

@@ -14,10 +14,10 @@ import java.util.ArrayList;
 
 public class MySongAdapter extends ArrayAdapter<Song> {
 
+    View listView;
     private TextView songNameView;
     private TextView songArtistView;
     private ImageView playView;
-    View listView;
 
     public MySongAdapter(@NonNull Context context, ArrayList<Song> resource) {
         super(context, 0, resource);
